@@ -1,0 +1,34 @@
+/* Custom CSS overrides */
+
+/* Make the danger color match the original red from the design */
+.bg-danger {
+    background-color: #e53e3e !important;
+  }
+  
+  .text-danger {
+    color: #e53e3e !important;
+  }
+  
+  .btn-danger {
+    background-color: #e53e3e !important;
+    border-color: #e53e3e !important;
+  }
+  
+  .btn-danger:hover {
+    background-color: #c53030 !important;
+    border-color: #c53030 !important;
+  }
+  
+  /* Additional custom styles */
+  body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+  
+  .form-control:focus, .form-select:focus {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 0.25rem rgba(229, 62, 62, 0.25);
+  }
