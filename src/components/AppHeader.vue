@@ -3,8 +3,8 @@
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
         <div class="logo">
-          <!-- <img src="/placeholder.svg?height=40&width=150" alt="(des)CONECTA logo" height="40" class="img-fluid" /> -->
-          <img src="" alt="(des)CONECTA logo" height="40" class="img-fluid" />
+          <img src="../assets/img/LOGO DESCONECTA-BLANCO Y ROJO.png" alt="(des)CONECTA logo" height="40" class="img-fluid" />
+       
         </div>
         <nav class="d-none d-md-flex">
           <ul class="list-unstyled d-flex mb-0">

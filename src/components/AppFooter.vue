@@ -4,7 +4,7 @@
       <div class="row gy-4">
         <div class="col-md-4">
           <!-- <img src="/placeholder.svg?height=40&width=150" alt="(des)CONECTA logo" class="img-fluid mb-3" style="height: 40px; width: auto;" /> -->
-          <img src="" alt="(des)CONECTA logo" class="img-fluid mb-3" style="height: 40px; width: auto;" />
+          <img :src=logodesconectaFooter alt="(des)CONECTA logo" class="img-fluid mb-3" style="height: 100px; width: auto;" />
           <div class="small">
             <p class="mb-1">Calle</p>
             <p class="mb-1">Ciudad, CP</p>
@@ -45,6 +45,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import logodesconectaFooter from '../assets/img/LOGO DESCONECTA-OK-BLANCO.png';
 export default defineComponent({
     name: 'AppFooter',
     data() {
@@ -54,7 +55,13 @@ export default defineComponent({
 
     components: {},
 
-    setup(props, { context }) {},
+    setup(props, { context }) {
+
+        return{
+            logodesconectaFooter
+        }
+
+    },
 
     mounted() {},
 

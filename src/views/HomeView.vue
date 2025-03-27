@@ -3,7 +3,7 @@
     <AppHeader />
     
     <!-- Hero Section -->
-    <section class="bg-danger text-white py-5">
+    <section class="text-white py-5 font-img">
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
@@ -70,8 +70,7 @@
             <CourseCard 
               title="Aprenderás a gestionar diferentes dispositivos digitales" 
               description="como tu teléfono móvil, tablet o portátil, para evitar la exposición de contenido tóxico o inapropiado, y establecer límites de acceso de forma segura."
-              icon="/placeholder.svg?height=40&width=40"
-              image="/placeholder.svg?height=200&width=300"
+              :image=portrait
             />
           </div>
           
@@ -79,8 +78,7 @@
             <CourseCard 
               title="Descubrirás los posibles riesgos asociados con un uso excesivo de pantallas" 
               description="y aprenderás a establecer el equilibrio entre el uso de la tecnología y el disfrute de otras actividades. Podrás reflexionar sobre tus propios hábitos digitales."
-              icon="/placeholder.svg?height=40&width=40"
-              image="/placeholder.svg?height=200&width=300"
+              :image=frontView
             />
           </div>
           
@@ -88,8 +86,7 @@
             <CourseCard 
               title="Conocerás las herramientas de desconexión digital en tus dispositivos" 
               description="para mejorar tu bienestar digital y tu salud. Aprenderás a establecer límites de tiempo en tus redes sociales y tu teléfono personal."
-              icon="/placeholder.svg?height=40&width=40"
-              image="../assets/img/girl-boy-spending-time-together-park-outside.png"
+              :image=girlBoyImage
             />
           </div>
         </div>
@@ -147,11 +144,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent , ref} from 'vue';
+
 import AppHeader from '../components/AppHeader.vue'
 import AppFooter from '../components/AppFooter.vue'
 import ContactForm from '../components/ContactForm.vue'
 import CourseCard from '../components/CourseCard.vue'
+
+import portrait from '../assets/img/portrait-woman-grabbing-head-desk-near-laptop.png'
+import frontView from '../assets/img/front-view-girls-holding-smartphones.png'
+import girlBoyImage from '../assets/img/girl-boy-spending-time-together-park-outside.png'
+import headerHero from '../assets/img/Heade-hero.png';
 export default defineComponent({
     name: 'Homeview',
     data() {
@@ -165,7 +168,22 @@ export default defineComponent({
     ContactForm,
     CourseCard},
 
-    setup(props, { context }) {},
+    setup(props, { context }) {
+
+       
+
+    const heroStyle = ref({
+    backgroundImage: `url(${headerHero})`,
+  
+    });
+        return{
+            girlBoyImage,
+            frontView,
+            portrait,
+            
+            heroStyle
+        }
+    },
 
     mounted() {},
 
@@ -185,7 +203,33 @@ export default defineComponent({
 .home-page section {
   padding: 4rem 0;
 }
+.font-img {
+  color: white;
+  padding: 4rem 0;
+  background-image: v-bind('heroStyle.backgroundImage');
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  position: relative;
+  
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+   
+    z-index: 0;
+  }
 
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+}
 .bg-danger {
   background: linear-gradient(135deg, #dc3545, #c82333);
 }
