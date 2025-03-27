@@ -89,7 +89,7 @@
               title="Conocerás las herramientas de desconexión digital en tus dispositivos" 
               description="para mejorar tu bienestar digital y tu salud. Aprenderás a establecer límites de tiempo en tus redes sociales y tu teléfono personal."
               icon="/placeholder.svg?height=40&width=40"
-              image="/placeholder.svg?height=200&width=300"
+              image="../assets/img/girl-boy-spending-time-together-park-outside.png"
             />
           </div>
         </div>

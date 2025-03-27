@@ -33,11 +33,11 @@ export default defineComponent({
     },
     icon: {
       type: String,
-     /*  default: '/placeholder.svg?height=40&width=40' */
+      default: ''
     },
     image: {
       type: String,
-     /*  default: '/placeholder.svg?height=200&width=300' */
+      default: ''
     }
   },
 
